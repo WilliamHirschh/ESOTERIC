@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-//Get api/users
+//Get api/post
 
-router.get('/', (req,res) => res.send('User route'));
+router.get('/', (req,res) => res.send('Post route'));
 
 module.exports = router;
