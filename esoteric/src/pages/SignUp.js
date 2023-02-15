@@ -38,12 +38,19 @@ const Signup = () => {
       };
     
       return (
-       
-        //palce html code in here
-
-
-      );
-    };
-
-
-    export default Signup;
+        <main className="flex-row justify-center mb-4">
+        <div className="col-12 col-md-6">
+          <div className="card">
+            <h4 className="card-header">Sign Up</h4>
+            <div className="card-body">
+              <form onSubmit={handleFormSubmit}>
+                <input
+                  className="form-input"
+                  placeholder="Your username"
+                  name="username"
+                  type="username"
+                  id="username"
+                  value={formState.username}
+                  onChange={handleChange}
+                />
+               
