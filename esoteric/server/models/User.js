@@ -2,7 +2,7 @@ const {Schema, model} = require('mongoose');
 const bcrypt = require('bcrypt')
 
 const userSchema = new Schema({
-    name: {
+    username: {
         type: String,
         required: true
     },
@@ -16,7 +16,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 5
     },
-    date: {
+    createdAt: {
         type: Date,
         default: Date.now
     }
@@ -37,6 +37,6 @@ userSchema.pre('save', async function (next) {
     return bcrypt.compare(password, this.password);
   };
 
-const User = model('Matchup', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
